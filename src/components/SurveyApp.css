@@ -1,0 +1,129 @@
+/* SurveyApp.css */
+
+/* Body background color */
+body {
+    background-color: #f2f2f2; /* Your desired background color */
+  }
+  
+  /* Container */
+  .container {
+    max-width: 800px; /* Adjust max-width as needed */
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Survey header */
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Card container */
+  .card {
+    margin-bottom: 20px; /* Add margin between cards */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  /* Card body */
+  .card-body {
+    padding: 20px;
+  }
+  
+  /* Question text */
+  .question-text {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  
+  
+  /* Options container */
+  .options-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Option */
+  .option {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .option:hover {
+    background-color: #dcd0ff; /* Hover color for options */
+  }
+  
+  /* Option text */
+  .option-text {
+    margin: 0;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  /* Selected option */
+  .option.selected {
+    background-color: #595959; /* Selected color for options */
+    color: #fff;
+  }
+  
+  /* Submit button */
+  .submit-button {
+    display: block;
+    margin: 20px auto; /* Center the submit button and add margin */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #0084ff7f;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #aa47dc;
+  }
+  
+  
+  /* SurveyApp.css */
+  .star {
+    font-size: 30px; /* Increase the font size to make the stars bigger */
+    color: #ccc; /* Default color of the stars */
+    cursor: pointer; /* Show pointer cursor when hovering over the stars */
+    margin: 0 5px; /* Add margin between stars */
+  }
+
+.star.selected {
+  color: #f0c419; /* Change the color of selected stars */
+}
+
+.rating-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px; /* Add margin between question text and stars */
+}
+
+.container img {
+  width: 400px; /* Adjust the width as needed */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px; /* Add margin between the image and other content */
+}
+
+.survey-name {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+

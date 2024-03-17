@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import AdminPanel from './components/AdminPanel';
+import LoginPage from './components/LoginPage';
+import SurveyApp from './components/SurveyApp'; // Import SurveyApp component
+import { useParams } from 'react-router-dom';
+
+const token = document.cookie.replace(/(?:(?:^|.*;\s*)token\s*=\s*([^;]*).*$)|^.*$/, '$1');
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/admin" element={token ? <AdminPanel /> : <Navigate to="/login" />} />
+        <Route path="/surveys/:surveyLink" element={<SurveyApp />} /> {/* Add route for the survey link */}
+      </Routes>
+    </BrowserRouter>
   );
 }
 
